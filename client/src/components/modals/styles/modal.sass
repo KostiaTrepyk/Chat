@@ -1,0 +1,134 @@
+.Modal
+    height: 0px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 100vw
+    transition: 0.5s all
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    overflow: hidden
+    .Modal_container
+        padding: 20px
+        width: 500px
+        border-radius: 20px
+        .Modal_controls
+            display: flex
+            justify-content: flex-end
+            width: 100%
+            button
+                border: none
+                background-color: #00000000
+                svg
+                    height: 45px
+                    width: 45px
+                    padding: 5px 5px
+                    line-height: 17.5px
+                    border-radius: 10px
+                    text-align: center
+                    transition: 0.3s all
+
+        .Modal_main
+            text-align: center
+            .Modal_title
+                margin-bottom: 2vh
+            form
+                display: flex
+                flex-direction: column
+                align-items: center
+                gap: 10px
+                div
+                    text-align: center
+                    width: 20%
+                    padding: 5px
+                    border-bottom: 1px solid
+                input
+                    border-radius: 5px
+                    border: 1px solid
+                    padding: 5px 10px
+                    transition: 0.5s all
+                    &:focus
+                        outline: none
+                button
+                    margin-top: 5px
+                    border: 1px solid
+                    border-radius: 10px
+                    padding: 10px 20px
+                    font-weight: bold
+                    transition: 0.5s all
+.Modal.active
+    height: 100dvh
+    width: 100vw
+
+#light
+    .Modal
+        background-color: rgba(202, 202, 202, 0.80)
+        .Modal_container
+            background-color: #bebebe
+            box-shadow: 0 0 20px 0px #555555
+            .Modal_controls
+                button
+                    svg
+                        color: #2e2e2e
+                        &:hover
+                            color: #e00000
+
+            .Modal_main
+                .Modal_title
+                    color: #444
+                form
+                    div
+                        color: #444
+                        border-bottom-color: #505050
+                    input
+                        background-color: #00000000
+                        color: #444
+                        &:focus
+                            background-color: #00000025
+                    button
+                        background-color: #00000000
+                        box-shadow: 0px 0px 10px 1px inset #979797
+                        color: #444
+                        &:hover
+                            background-color: #15fd0025
+                            box-shadow: 0px 0px 10px 1px inset #47474798
+                            &:active
+                                background-color: #10c400
+
+#dark
+    .Modal
+        background-color: rgba(43, 43, 43, 0.95)
+        .Modal_container
+            background-color: #353535
+            box-shadow: 0 0 20px 0px #1b1b1b /* ??? */
+            .Modal_controls
+                button
+                    svg
+                        color: #bdbdbd
+                        &:hover
+                            color: #bd0000
+            .Modal_main
+                .Modal_title
+                    color: #ddd
+                form
+                    div
+                        color: #ddd
+                        border-bottom-color: #636363
+                    input
+                        background-color: #00000000
+                        color: #ddd
+                        &:focus
+                            background-color: #ffffff23
+                    button
+                        background-color: #00000000
+                        box-shadow: 0px 0px 10px 1px inset #ffffff2f
+                        color: #ddd
+                        &:hover
+                            background-color: #09ff0013
+                            box-shadow: 0px 0px 10px 1px inset #ffffff48
+                            &:active
+                                background-color: #007209

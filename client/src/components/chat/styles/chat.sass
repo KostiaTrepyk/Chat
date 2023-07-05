@@ -1,0 +1,102 @@
+.Chat
+    height: calc(100vh - 60px)
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    transition: 0.3s all
+    z-index: 1
+    .Chat_controlls
+        height: 50px
+        width: 100%
+        display: flex
+        justify-content: space-between
+        .Chat_loading
+            height: 50px
+            width: 50px
+            color: #b1b1b1
+        .Chat_loaded
+            display: none
+    .Chat_form
+        height: 60px
+        width: 100%
+        padding: 0 5vw
+        display: flex
+        align-items: center
+        transition: 0.5s all
+        input
+            height: 40px
+            font-size: 1rem
+            padding: 5px 10px
+            width: 100%
+            border: 1px solid
+            border-right: 0px
+            border-radius: 5px 0 0 15px
+            transition: 0.3s background-color
+            outline: 0
+        button
+            text-align: center
+            font-weight: 600
+            font-size: 1.2rem
+            height: 40px
+            width: 150px
+            border: 1px solid
+            border-radius: 0px
+            border-radius: 0 15px 5px 0
+            transition: 0.3s background-color
+            cursor: pointer
+
+#light
+    .Chat
+        background-color: #fff
+        .Chat_controlls
+            .Chat_loading
+                color: #808080
+            .Chat_loaded
+        .Chat_form
+            background-color: #ebebeb
+            input
+                border-color: #777777
+                background-color: #ffffff
+                color: #2c2c2c
+                &:focus
+                    background-color: #e2e2e2
+
+            button
+                border-color: #777777
+                background-color: #ffffff
+                color: #2c2c2c
+                &:hover
+                    background-color: #e2e2e2
+
+#dark
+    .Chat
+        background-color: #141414
+        .Chat_controlls
+            .Chat_loading
+                color: #b1b1b1
+            .Chat_loaded
+        .Chat_form
+            background-color: #202020
+            input
+                border-color: #838383
+                background-color: #313131
+                color: #ebe9e9
+                &:focus
+                    background-color: #474747
+
+            button
+                border-color: #838383
+                background-color: #313131
+                color: #ebe9e9
+                &:hover
+                    background-color: #474747
+
+@media screen and (max-width: 500px )
+    .Chat
+        .Chat_form
+            input
+                width: 100%
+            button
+                font-size: 0.9rem
+                width: 100px

@@ -1,0 +1,115 @@
+.Navbar
+    position: relative
+    height: 60px
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    transition: 0.5s all
+    .Navbar_nav
+        padding: 0px 2vw
+        height: 100%
+        width: 70%
+        display: flex
+        .Navbar_logo
+            line-height: 60px
+            margin-right: 10px
+            img
+                margin: 5px
+                height: 50px
+                width: 45px
+        a
+            font-size: 1.2rem
+            font-weight: 600
+            line-height: 47px
+            margin: 5px 0px
+            height: 50px
+            width: 100px
+            text-decoration: none
+            text-align: center
+            transition: 0.5s color, 0.5s background-color
+            border-radius: 5px
+        .active
+            transition: 0.5s color, 0.5s background-color
+        .Navbar_divider
+            margin: 10px 2vw
+            height: 40px
+            border-right: 1px solid
+            border-radius: 10px
+    .Navbar_control
+        width: 30%
+        display: flex
+        flex-direction: row
+        justify-content: flex-end
+        .Navbar_themeBtn
+            margin: 10px
+            height: 40px
+            width: 40px
+            text-align: center
+            border-radius: 100%
+            transition: 0.3s color
+            cursor: pointer
+        .Navbar_user
+            height: 50px
+            width: 50px
+            margin: 5px 2vw 5px 0
+            border: 1px solid
+            border-radius: 25%
+
+            .Navbar_avatar
+                height: 40px
+                width: 40px
+                cursor: pointer
+                margin: 5px
+
+/* Light theme */
+#light .Navbar
+    background-color: #cfcfcf
+    color: #202020
+    box-shadow: 0px 0px 10px 0px #6e6e6e
+    .Navbar_nav
+        a
+            color: #202020
+            &:hover
+                color: #00a800
+
+        .active
+            color: #008800
+            background-color: #d8d8d8
+            &:hover
+                color: #00a800
+
+        .Navbar_divider
+            border-color: gray
+
+    .Navbar_control
+        .Navbar_themeBtn
+            color: #000
+            &:hover
+                color: #fbff00
+
+/* Dark theme */
+#dark .Navbar
+    background-color: #1b1b1b
+    color: #d6d6d6
+    box-shadow: 0px 0px 10px 0px #000000
+    .Navbar_nav
+        a
+            color: #d8d8d8
+            &:hover
+                color: #00a000
+
+        .active
+            color: green
+            background-color: #222222
+            &:hover
+                color: #00a000
+
+        .Navbar_divider
+            border-color: #a0a0a0
+
+    .Navbar_control
+        .Navbar_themeBtn
+            color: white
+            &:hover
+                color: #fbff00

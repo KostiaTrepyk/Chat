@@ -1,0 +1,28 @@
+.ChatItem
+    padding: 20px
+    font-size: 1.3rem
+    font-weight: bold
+    transition: 0.3s all
+    cursor: pointer
+.ChatItem_active
+
+#light
+    .ChatItem
+        color: #000
+        &:hover
+            background-color: #a8a8a8
+            &:active
+                background-color: #555555
+    .ChatItem_active
+        background-color: #b1b1b1
+
+#dark
+    .ChatItem
+        color: #fff
+        &:hover
+            background-color: #272727
+            &:active
+                background-color: #494949
+    .ChatItem_active
+        background-color: #1d1d1d
+

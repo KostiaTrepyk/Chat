@@ -1,0 +1,42 @@
+.ChatsPage
+    .ChatsPage_content
+        display: flex
+        flex-direction: row
+        overflow: hidden
+        .ChatsPage_listToggler
+            cursor: pointer
+            line-height: calc( 100vh - 100px )
+            padding: 0 3px
+            width: 25px
+            display: none
+            @media (max-width: 1000px)
+                display: block
+                &[aria-hidden='true']
+                    position: relative
+                    left: calc( 100% - 25px )
+        .ChatsPage_list
+            width: 350px
+            transition: 0.5s width
+            @media (max-width: 1000px)
+                width: 0
+                &[aria-hidden='true']
+                    position: absolute
+                    height: calc( 100% - 60px )
+                    width: calc( 100% - 25px )
+        .ChatsPage_chat
+            width: calc( 100% - 350px )
+            margin: 0 0 0 auto
+            transition: 0.5s width
+            @media (max-width: 1000px)
+                width: calc( 100% - 25px )
+                &[aria-hidden='true']
+                    width: 0
+
+#light
+    .ChatsPage_listToggler
+        background-color: #c2c2c2
+        color: #333333
+#dark
+    .ChatsPage_listToggler
+        background-color: #1f1f1f
+        color: #b8b8b8

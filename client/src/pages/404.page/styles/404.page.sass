@@ -1,0 +1,28 @@
+.PageNotFound
+    height: calc(100dvh - 60px - 100px)
+    width: 100%
+    display: flex
+    flex-direction: column
+    gap: 3vh
+    justify-content: center
+    padding-bottom: 15vh
+    text-align: center
+    font-size: 1.5rem
+    transition: 0.3s all
+    @media (max-width: 1000px)
+        font-size: 1rem
+    .PageNotFound_Link
+        transition: 0.3s all
+
+#light .PageNotFound
+    background-color: #ffffff
+    color: #2c2c2c
+    .PageNotFound_Link
+        font-weight: bold
+        color: #2a9400
+
+#dark .PageNotFound
+    background-color: #252525
+    color: #c4c4c4
+    .PageNotFound_Link
+        color: #11cf00

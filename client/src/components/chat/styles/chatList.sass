@@ -1,0 +1,85 @@
+.ChatsList
+    height: 100%
+    width: 100%
+    transition: 0.5s background-color
+    .ChatList_controls
+        height: 50px
+        width: 100%
+        padding: 0 17px
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        .ChatList_RefreshChatsBtn
+            height: 40px
+            width: 40px
+            transition: 0.3s all
+        .ChatList_searchInput
+            height: 33px
+            width: 70%
+            border-radius: 5px
+            border: 2px solid
+            font-size: 0.9rem
+            padding: 0 10px
+            transition: 0.3s all
+            &:focus
+                outline: none
+        .ChatList_AddChatBtn
+            height: 40px
+            width: 40px
+            transition: 0.3s color
+            &:hover
+                cursor: pointer
+    .ChatList_list
+        height: calc(100% - 50px - 2px)
+        overflow-y: scroll
+
+    .ChatList_divider
+        height: 0px
+        width: 100%
+        border-top: 1px solid
+        border-bottom: 1px solid
+        transition: 0.3s border-bottom-color, 0.3s border-top-color
+
+#light .ChatsList
+    background-color: #c9c9c9
+    .ChatList_controls
+        .ChatList_RefreshChatsBtn
+            color: #242424
+            &:hover
+                color: #505050
+                &:active
+                    color: orange
+        .ChatList_searchInput
+            border-color: #3b3b3b
+            background-color: #eeeeee
+        .ChatList_AddChatBtn
+            color: #252525
+            &:hover
+                color: #1eb400
+    .ChatList_list
+    .ChatList_divider
+        border-top-color: #c0c0c0
+        border-bottom-color: #858585
+
+#dark .ChatsList
+    background-color: #0c0c0c
+    .ChatList_controls
+        .ChatList_RefreshChatsBtn
+            color: #c9c9c9
+            &:hover
+                color: #ffffff
+                &:active
+                    color: orange
+        .ChatList_searchInput
+            border-color: #474747
+            background-color: #1f1f1f
+            color: #c5c3c3
+        .ChatList_AddChatBtn
+            color: #eeeeee
+            &:hover
+                color: #1eb400
+    .ChatList_list
+    .ChatList_divider
+        border-top-color: #252525
+        border-bottom-color: #333333

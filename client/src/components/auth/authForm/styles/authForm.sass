@@ -1,0 +1,71 @@
+.AuthForm_container
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin-bottom: 15vh
+    .AuthForm_title
+        font-size: 1.8rem
+        transition: 0.5s color
+        margin-bottom: 1vh
+    .AuthForm_loaded
+        border: 2px solid #00000000
+        border-radius: 25px
+    .AuthForm_loading
+        border: 2px solid #0000
+        border-radius: 25px
+        animation-name: formLoading
+        animation-duration: 3s
+        animation-iteration-count: infinite
+        animation-direction: alternate-reverse
+    .AuthForm_form
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        width: 500px
+        padding: 7vh 1vw
+        margin: 0
+        border-radius: 20px
+        transition: 0.5s background-color
+        input
+            margin: 2px 0 5px
+            padding: 2px 10px
+            width: 250px
+            border-radius: 5px
+            &:focus
+                outline: none
+        button
+            margin-bottom: 5px
+
+#light
+    .AuthForm_title
+        color: #111111
+    .AuthForm_form
+        background-color: #cecece
+        input
+
+            &:focus
+
+        button
+
+#dark
+    .AuthForm_title
+        color: #dddddd
+
+    .AuthForm_form
+        background-color: #353535
+        input
+
+            &:focus
+
+        button
+
+@keyframes formLoading
+    0%
+        border-color: #ff6565
+    50%
+        border-color: #65ff65
+    100%
+        border-color: #6574ff

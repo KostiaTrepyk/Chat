@@ -1,0 +1,23 @@
+.MessageList
+    display: flex
+    flex-direction: column
+    height: calc(100% - 60px)
+    width: 100%
+    padding: 10px 20px
+    overflow-y: scroll
+    row-gap: 1vh
+    .MessageList_info
+        border-radius: 2vw
+        padding: 5vh 10vw 5vh 5vw
+        text-align: center
+        font-size: 2rem
+        font-weight: bold
+        transition: 0.5s color
+
+#light .MessageList .MessageList_info
+    color: #424242
+    background-color: #0000001c
+
+#dark .MessageList .MessageList_info
+    color: #c7c7c7
+    background-color: #ffffff0e
